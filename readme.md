@@ -23,13 +23,8 @@ Start Server: `grunt serve`
 - Cross-browser compatible.
 - Latest Bootstrap and jQuery integration.
 - modernizr inclusion
-- Useful CSS helpers.
-<<<<<<< HEAD
+- useful CSS helpers.
 - performance optimized.
-=======
-- Default print CSS, performance optimized.
->>>>>>> 82f540bf8e387c7d74c85bd550c02a40f0f5b675
-
 
 
 ## Contribute
