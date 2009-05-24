@@ -24,7 +24,7 @@ Start Server: `grunt serve`
 - Latest Bootstrap and jQuery integration.
 - modernizr inclusion
 - Useful CSS helpers.
-- Default print CSS, performance optimized.
+- performance optimized.
 
 
 
