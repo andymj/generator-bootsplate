@@ -49,7 +49,7 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
     fireBower: function () {
 
         this.copy("_.bowerrc", ".bowerrc");
-        this.bowerInstall('bootstrap.css', {
+        this.bowerInstall('bootstrap', {
             save: true
         });
 
