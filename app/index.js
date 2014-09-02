@@ -2,6 +2,7 @@
 var path = require('path');
 var util = require('util');
 var yeoman = require('yeoman-generator');
+var fs = require('fs');
 
 
 var BootsPlateGenerator = yeoman.generators.Base.extend({
@@ -37,7 +38,22 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
         this.copy("index.html", this.appName + "/index.html");
     },
 
+    fireBower: function () {
+
+        var context = {
+            site_name: this.appName
+        };
+
+        this.template("_.bowerrc", ".bowerrc", context);
+        this.bowerInstall('bootstrap.css', {
+            save: true
+        });
+
+        
+    },
+
+
 });
 
-this.bowerInstall(bootstrap.css, { save: true });
+
 module.exports = BootsPlateGenerator;
