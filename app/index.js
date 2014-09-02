@@ -23,33 +23,36 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
     },
 
     scaffoldFolders: function () {
-        this.mkdir(this.appName);
-        this.mkdir(this.appName + '/css');
-        this.mkdir(this.appName + '/js');
-        this.mkdir(this.appName + '/fonts');
-        this.mkdir(this.appName + '/img');
+        this.mkdir('app');
+        this.mkdir('app/css');
+        this.mkdir('app/js');
+        this.mkdir('app/fonts');
+        this.mkdir('app/img');
     },
 
 
     copyMainFiles: function () {
-        this.copy("404.html", this.appName + "/404.html");
-        this.copy("favicon.ico", this.appName + "/favicon.ico");
-        this.copy("robots.txt", this.appName + "/robots.txt");
-        this.copy("index.html", this.appName + "/index.html");
-    },
-
-    fireBower: function () {
-
         var context = {
             site_name: this.appName
         };
 
-        this.template("_.bowerrc", ".bowerrc", context);
+        this.copy("404.html", "app/404.html");
+        this.copy("favicon.ico", "app/favicon.ico");
+        this.copy("robots.txt", "app/robots.txt");
+        this.template("index.html", "app/index.html", context);
+
+        this.copy("css/main.css", "app/css/main.css");
+        this.copy("css/normalize.css", "app/css/normalize.css");
+        this.copy("js/modernizr-2.6.2.min.js", "app/js/modernizr-2.6.2.min.js");
+    },
+
+    fireBower: function () {
+
+        this.copy("_.bowerrc", ".bowerrc");
         this.bowerInstall('bootstrap.css', {
             save: true
         });
 
-        
     },
 
 
