@@ -7,16 +7,13 @@
     "framework",
     "component",
     "bootstrap",
-    "ui",
-    "css",
-    "sass",
-    "less"
+    "css"
   ],
-  "author": "The Yeoman Team",
+  "author": "Michael Knoch",
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/yeoman/generator-bootstrap.git"
+    "url": "git://github.com/michaelknoch/generator-bootsplate.git"
   },
   "scripts": {
     "test": "mocha"

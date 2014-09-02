@@ -4,49 +4,40 @@ var util = require('util');
 var yeoman = require('yeoman-generator');
 
 
-var Generator = module.exports = function Generator(args, options) {
-  yeoman.generators.Base.apply(this, arguments);
+var BootsPlateGenerator = yeoman.generators.Base.extend({
+    promptUser: function () {
+        var done = this.async();
 
-  this.option('format', {
-    desc: 'Select one of `css`, `sass`, `less`, `stylus` for the bootstrap format.',
-    type: String
-  });
 
-  this.format = options.format;
-};
+        var prompts = [{
+            name: 'appName',
+            message: 'What is your sites name ?'
+        }];
 
-util.inherits(Generator, yeoman.generators.Base);
+        this.prompt(prompts, function (props) {
+            this.appName = props.appName;
 
-Generator.prototype.askFor = function askFor(argument) {
-  if (this.format) {
-    // Skip if already set.
-    return;
-  }
+            done();
+        }.bind(this));
+    },
 
-  var cb = this.async();
-  var formats = ['css', 'sass', 'less', 'stylus'];
-  var prompts = [{
-    type: 'list',
-    name: 'format',
-    message: 'In what format would you like the Bootstrap stylesheets?',
-    choices: formats
-  }];
+    scaffoldFolders: function () {
+        this.mkdir(this.appName);
+        this.mkdir(this.appName + '/css');
+        this.mkdir(this.appName + '/js');
+        this.mkdir(this.appName + '/fonts');
+        this.mkdir(this.appName + '/img');
+    },
 
-  this.prompt(prompts, function (props) {
-    this.format = props.format;
 
-    cb();
-  }.bind(this));
-};
+    copyMainFiles: function () {
+        this.copy("404.html", this.appName + "/404.html");
+        this.copy("favicon.ico", this.appName + "/favicon.ico");
+        this.copy("robots.txt", this.appName + "/robots.txt");
+        this.copy("index.html", this.appName + "/index.html");
+    },
 
-Generator.prototype.bootstrapFiles = function bootstrapFiles() {
-  // map format -> package name
-  var packages = {
-    css: 'bootstrap.css',
-    sass: 'bootstrap-sass-official',
-    less: 'components-bootstrap',
-    stylus: 'bootstrap-stylus'
-  };
+});
 
-  this.bowerInstall(packages[this.format], { save: true });
-};
+this.bowerInstall(bootstrap.css, { save: true });
+module.exports = BootsPlateGenerator;
