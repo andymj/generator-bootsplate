@@ -4,8 +4,9 @@ var util = require('util');
 var yeoman = require('yeoman-generator');
 var fs = require('fs');
 
-
 var BootsPlateGenerator = yeoman.generators.Base.extend({
+
+
     promptUser: function () {
         var done = this.async();
 
@@ -20,6 +21,7 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
 
             done();
         }.bind(this));
+
     },
 
     scaffoldFolders: function () {
@@ -35,7 +37,6 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
         var context = {
             site_name: this.appName
         };
-
         this.copy("404.html", "app/404.html");
         this.copy("favicon.ico", "app/favicon.ico");
         this.copy("robots.txt", "app/robots.txt");
@@ -47,8 +48,11 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
     },
 
     fireBower: function () {
-
+        var context = {
+            site_name: this.appName
+        };
         this.copy("_.bowerrc", ".bowerrc");
+        this.template("_bower.json", "bower.json", context);
         this.bowerInstall('bootstrap', {
             save: true
         });
