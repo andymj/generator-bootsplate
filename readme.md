@@ -2,7 +2,7 @@
 
 ![](https://www.openshift.com/sites/default/files/images/yeoman-logo.png)
 
-###Simply rolls out a template which resulted from the fusion of HTML5 Boilerplate & Bootstrap, with some additional nice features.
+####Simply rolls out a template which resulted from the fusion of HTML5 Boilerplate & Bootstrap, with some additional nice features.
 
 Maintainer: [Michael Knoch](https://github.com/michaelknoch)
 
