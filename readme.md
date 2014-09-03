@@ -1,29 +1,17 @@
-# Bootstrap & HTML5 Boilerplate generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-bootstrap.svg?branch=master)](http://travis-ci.org/yeoman/generator-bootstrap)
+# Bootstrap & HTML5 Boilerplate generator
 
-Simply lets you choose which flavor of [Bootstrap](http://getbootstrap.com) you would like to add to a project: CSS, SASS, LESS or Stylus. When you select an option, we'll pull down the relevant package from [Bower](http://bower.io) for you. 
+Simply rolls out a template which resulted from the fusion of HTML5 Boilerplate & Bootstrap
 
-Maintainer: [Brian Ford](https://github.com/btford)
+Maintainer: [Michael Knoch](https://github.com/michaelknoch)
 
-## Preview
 
-```shell
-$ yo bootsplate
-[?] In what format would you like the Bootstrap stylesheets? (Use arrow keys)
-❯ css
-  sass
-  less
-  stylus 
-```
 
 ## Getting Started
 
 Install: `npm install -g generator-bootsplate
 
-Usage: `yo bootstrap`
+Usage: `yo bootsplate`
 
-Available generators:
-
-- bootstrap:app
 
 
 ## Contribute
