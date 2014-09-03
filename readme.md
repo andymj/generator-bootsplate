@@ -8,7 +8,7 @@ Maintainer: [Michael Knoch](https://github.com/michaelknoch)
 
 ## Getting Started
 
-Install: `npm install -g generator-bootsplate´
+Install: `npm install -g generator-bootsplate`
 
 Usage: `yo bootsplate`
 
