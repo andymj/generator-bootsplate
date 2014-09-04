@@ -1,39 +1,40 @@
 {
-  "name": "generator-bootsplate",
-  "version": "0.2.0",
-  "description": "Yeoman generator for HTML5 Boilerplate and Bootstrap Template",
-  "keywords": [
+    "name": "generator-bootsplate",
+    "version": "0.0.1",
+    "description": "Yeoman generator for HTML5 Boilerplate and Bootstrap Template",
+    "keywords": [
     "yeoman-generator",
     "framework",
     "component",
     "bootstrap",
+    "boilerplate",
     "css"
   ],
-  "author": "Michael Knoch",
-  "main": "app/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/michaelknoch/generator-bootsplate.git"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
-  "dependencies": {
-    "yeoman-generator": "^0.17.2"
-  },
-  "devDependencies": {
-    "mocha": "*"
-  },
-  "peerDependencies": {
-    "yo": ">=1.0.0"
-  },
-  "engines": {
-    "node": ">=0.10.0",
-    "npm": ">=1.2.10"
-  },
-  "licenses": [
-    {
-      "type": "BSD"
+    "author": "Michael Knoch",
+    "main": "app/index.js",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/michaelknoch/generator-bootsplate.git"
+    },
+    "scripts": {
+        "test": "mocha"
+    },
+    "dependencies": {
+        "yeoman-generator": "^0.17.2"
+    },
+    "devDependencies": {
+        "mocha": "*"
+    },
+    "peerDependencies": {
+        "yo": ">=1.0.0"
+    },
+    "engines": {
+        "node": ">=0.10.0",
+        "npm": ">=1.2.10"
+    },
+    "licenses": [
+        {
+            "type": "BSD"
     }
   ]
 }
