@@ -45,6 +45,10 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
         this.copy("css/main.css", "app/css/main.css");
         this.copy("css/normalize.css", "app/css/normalize.css");
         this.copy("js/modernizr-2.6.2.min.js", "app/js/modernizr-2.6.2.min.js");
+
+        this.template("_package.json", "package.json", context);
+        this.template("gruntfile.js", "gruntfile.js", context);
+        
     },
 
     fireBower: function () {
@@ -57,6 +61,10 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
             save: true
         });
 
+    },
+    
+    fireNpm: function() {
+        this.npmInstall();
     },
 
 
