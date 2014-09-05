@@ -20,7 +20,7 @@ Start Server: `grunt serve`
 ## Features
 
 - HTML5 ready.
-- Webserver which listens to HTML, CSS and JS modifications to fire page reloads automatically (Grunt Connect)
+- Contains a webserver which listens to HTML, CSS and JS modifications to fire page reloads automatically (Grunt Connect)
 - Cross-browser compatible.
 - Latest Bootstrap and jQuery integration.
 - modernizr inclusion
