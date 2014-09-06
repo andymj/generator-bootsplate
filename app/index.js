@@ -40,7 +40,8 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
         this.copy("404.html", "app/404.html");
         this.copy("favicon.ico", "app/favicon.ico");
         this.copy("robots.txt", "app/robots.txt");
-        this.template("index.html", "app/index.html", context);
+        this.template("_index.html", "app/index.html", context);
+        this.template("_prototyp.html", "app/prototyp.html", context);
 
         this.copy("css/main.css", "app/css/main.css");
         this.copy("css/normalize.css", "app/css/normalize.css");
