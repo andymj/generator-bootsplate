@@ -7,7 +7,6 @@
 Maintainer: [Michael Knoch](https://github.com/michaelknoch)
 
 
-
 ## Getting Started
 
 Install: `npm install -g generator-bootsplate`
