@@ -2,22 +2,6 @@
     "name": "<%= site_name %>",
     "version": "1.0.0",
     "main": "app/index.html",
-    "ignore": [
-        "**/.*"
-        "**/.*",
-        "_*",
-        "assets",
-        "examples",
-        "/fonts",
-        "js/tests",
-        "CNAME",
-        "CONTRIBUTING.md",
-        "Gruntfile.js",
-        "browserstack.json",
-        "composer.json",
-        "package.json",
-        "*.html"
-    ],
     "dependencies": {
         "bootstrap": "~3.2.0"
     },
