@@ -7,7 +7,7 @@ var fs = require('fs');
 var BootsPlateGenerator = yeoman.generators.Base.extend({
 
 
-    promptUser: function () {
+    promptUser: function() {
         var done = this.async();
 
 
@@ -16,7 +16,7 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
             message: 'What is your sites name ?'
         }];
 
-        this.prompt(prompts, function (props) {
+        this.prompt(prompts, function(props) {
             this.appName = props.appName;
 
             done();
@@ -24,7 +24,7 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
 
     },
 
-    scaffoldFolders: function () {
+    scaffoldFolders: function() {
         this.mkdir('app');
         this.mkdir('app/css');
         this.mkdir('app/js');
@@ -33,7 +33,7 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
     },
 
 
-    copyMainFiles: function () {
+    copyMainFiles: function() {
         var context = {
             site_name: this.appName
         };
@@ -49,24 +49,19 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
 
         this.template("_package.json", "package.json", context);
         this.template("gruntfile.js", "gruntfile.js", context);
-        
+
     },
 
-    fireBower: function () {
+    fireBower: function() {
         var context = {
             site_name: this.appName
         };
         this.copy("_.bowerrc", ".bowerrc");
         this.template("_bower.json", "bower.json", context);
-        this.bowerInstall('bootstrap', {
-            save: true
-        });
+        this.bowerInstall();
 
     },
-    
-    fireNpm: function() {
-        this.npmInstall();
-    },
+
 
 
 });
