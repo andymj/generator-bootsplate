@@ -61,9 +61,9 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
         this.bowerInstall();
 
     },
-
-
-
+    fireNpm: function() {
+        this.npmInstall();
+    },
 });
 
 
