@@ -45,7 +45,7 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
         this.copy("js/modernizr-2.6.2.min.js", "app/js/modernizr-2.6.2.min.js");
 
         this.template("_package.json", "package.json", context);
-        this.template("gruntfile.js", "gruntfile.js", context);
+        this.template("gulpfile.js", "gulpfile.js", context);
 
     },
 
