@@ -13,7 +13,7 @@ Install: `npm install -g generator-bootsplate`
 
 Scaffold: `yo bootsplate`
 
-Start Server: `grunt serve`
+Start Server: `gulp`
 
 
 ## Features
