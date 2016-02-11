@@ -18,10 +18,10 @@
         "url": "git://github.com/michaelknoch/generator-bootsplate.git"
     },
     "dependencies": {
-        "yeoman-generator": "^0.17.2"
+        "yeoman-generator": "latest"
     },
     "peerDependencies": {
-        "yo": ">=1.0.0"
+        "yo": "latest"
     },
     "engines": {
         "node": ">=0.10.0",
