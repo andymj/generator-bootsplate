@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "main": "app/index.html",
     "dependencies": {
-        "bootstrap": "~3.2.0"
+        "bootstrap": "latest"
     },
     "appPath": "app"
 }
