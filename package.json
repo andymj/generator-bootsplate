@@ -1,6 +1,6 @@
 {
     "name": "generator-bootsplate",
-    "version": "0.1.1",
+    "version": "0.2.1",
     "description": "Yeoman generator for HTML5 Boilerplate and Bootstrap Template",
     "keywords": [
         "yeoman-generator",
@@ -17,14 +17,8 @@
         "type": "git",
         "url": "git://github.com/michaelknoch/generator-bootsplate.git"
     },
-    "scripts": {
-        "test": "mocha"
-    },
     "dependencies": {
         "yeoman-generator": "^0.17.2"
-    },
-    "devDependencies": {
-        "mocha": "*"
     },
     "peerDependencies": {
         "yo": ">=1.0.0"
