@@ -6,10 +6,8 @@ var fs = require('fs');
 
 var BootsPlateGenerator = yeoman.generators.Base.extend({
 
-
     promptUser: function() {
         var done = this.async();
-
 
         var prompts = [{
             name: 'appName',
@@ -27,11 +25,11 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
     scaffoldFolders: function() {
         this.mkdir('app');
         this.mkdir('app/css');
+        this.mkdir('app/scss');
         this.mkdir('app/js');
         this.mkdir('app/fonts');
         this.mkdir('app/img');
     },
-
 
     copyMainFiles: function() {
         var context = {
@@ -41,7 +39,6 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
         this.copy("favicon.ico", "app/favicon.ico");
         this.copy("robots.txt", "app/robots.txt");
         this.template("_index.html", "app/index.html", context);
-        this.template("_prototyp.html", "app/prototyp.html", context);
 
         this.copy("css/main.css", "app/css/main.css");
         this.copy("css/normalize.css", "app/css/normalize.css");
@@ -65,6 +62,5 @@ var BootsPlateGenerator = yeoman.generators.Base.extend({
         this.npmInstall();
     },
 });
-
 
 module.exports = BootsPlateGenerator;
