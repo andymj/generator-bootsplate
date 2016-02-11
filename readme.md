@@ -23,16 +23,8 @@ Start Server: `gulp`
 - Cross-browser compatible.
 - Latest Bootstrap and jQuery integration.
 - modernizr inclusion
-<<<<<<< HEAD
-- useful CSS helpers.
-=======
-- Useful CSS helpers.
-<<<<<<< HEAD
->>>>>>> 9ad36a6e71c78822a86d14783f0466ffb0cd7d08
-- performance optimized.
-=======
-- Default print CSS, performance optimized.
->>>>>>> 82f540bf8e387c7d74c85bd550c02a40f0f5b675
+- Useful CSS helpers
+- performance optimized
 
 
 ## Contribute
